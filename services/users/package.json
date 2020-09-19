@@ -1,0 +1,28 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "User microservice for user registration, login",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "user"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "knex": "^0.21.5",
+    "moment": "^2.28.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3"
+  }
+}
