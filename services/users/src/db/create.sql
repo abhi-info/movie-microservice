@@ -1,2 +1,1 @@
-CREATE DATABASE users_dev;
-CREATE DATABASE users_test;
+CREATE DATABASE roost_users;
