@@ -10,7 +10,7 @@ router.get('/ping', (req, res) => {
 
 router.post('/register', (req, res) => {
 	const username = req.body.username;
-	if (username || !req.body.name || !req.body.password || !req.body.company) {
+	if (!username || !req.body.name || !req.body.password || !req.body.company) {
 		return res.status(500).json({
 			status: 'error',
 			message: "Please fill all the required fields",
@@ -44,7 +44,7 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res) => {
 	const username = req.body.username;
 	const password = req.body.password;
-	if (!username || password) {
+	if (!username || !password) {
 		return res.status(500).json({
 			status: 'error',
 			message: "Please fill all the required fields",
