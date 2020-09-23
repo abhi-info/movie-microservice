@@ -33,8 +33,7 @@ services:
     ports:
       - '3000:3000' # expose ports - HOST:CONTAINER
     environment:
-      - DATABASE_URL=postgres://postgres:postgres@users-db:5432/users_dev
-      - DATABASE_TEST_URL=postgres://postgres:postgres@users-db:5432/users_test
+      - DATABASE_URL=postgres://postgres:postgres@users-db:5432/roost_users
       - NODE_ENV=${NODE_ENV}
       - TOKEN_SECRET=changeme
     depends_on:

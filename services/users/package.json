@@ -4,7 +4,8 @@
   "description": "User microservice for user registration, login",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node app/src/app.js"
   },
   "keywords": [
     "user"

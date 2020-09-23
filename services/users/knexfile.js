@@ -2,17 +2,7 @@ const path = require('path');
 module.exports = {
   development: {
     client: 'pg',
-    connection: {
-      database: 'users_dev',
-      user: 'postgres',
-      password: 'postgres',
-      host: '127.0.0.1',
-      port: '5433'
-    },
-    pool: {
-      min: 1,
-      max: 15
-    },
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: path.join(__dirname, 'src', 'db', 'migrations')
     },
