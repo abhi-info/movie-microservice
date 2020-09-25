@@ -7,6 +7,8 @@ const routes = require('./routes/movies');
 
 const app = express();
 
+const port = process.env.PORT || '3006';
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
@@ -27,7 +29,7 @@ app.use((req, res, next) => {
   next(err);
 });
 
-/* eslint-disable no-unused-vars */
+
 app.use((err, req, res, next) => {
   const message = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
@@ -36,6 +38,10 @@ app.use((err, req, res, next) => {
     message: err,
   });
 });
-/* eslint-enable no-unused-vars */
+
+app.listen(port, () => {
+  console.log(`Movie microservice running on port ${port}`);
+});
+
 
 module.exports = app;
